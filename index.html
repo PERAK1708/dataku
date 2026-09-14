@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Tools Multi-User</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Akses User -->
+  <header>
+    <h1>Portal Tools</h1>
+        <div class="admin-only" style="display: none; margin-bottom: 1rem;">
+  <button id="btn-toggle-form" class="btn btn-primary">➕ Tambah Tool Baru</button>
+</div>
+    <div id="user-info">
+      <span id="user-email">Memuat...</span>
+      <span id="user-role" class="badge"></span>
+      <button id="btn-show-login" class="btn btn-primary">Login</button>
+      <button id="btn-logout" class="btn btn-danger" style="display:none;">Logout</button>
+    </div>
+    
+  </header>
+
+  <main class="container">
+    <div class="admin-only" style="display: none; margin-bottom: 1rem;">
+  <button id="btn-toggle-form" class="btn btn-primary">➕ Tambah Tool Baru</button>
+</div>
+    <!-- Panel Khusus Admin / Editor (Tambah/Edit Form) -->
+    <section id="admin-panel" class="card admin-only" style="display: none;">
+      <h2 id="form-title">Tambah Tools Baru</h2>
+      <form id="tools-form">
+        <input type="hidden" id="tool-id">
+        <input type="text" id="tool-title" placeholder="Nama Tool / Judul" required>
+        <select id="tool-category" required>
+          <option value="">-- Pilih Bidang / Kategori --</option>
+          <option value="frontend">Frontend Dev</option>
+          <option value="backend">Backend Dev</option>
+          <option value="animator">Animator / Design</option>
+        </select>
+        <textarea id="tool-content" placeholder="Isi Teks / Script / Code" rows="4" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Simpan Tool</button>
+          <button type="button" id="btn-cancel" class="btn btn-secondary" style="display:none;">Batal</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Filter Kategori / Bidang -->
+    <section class="filter-section">
+      <label for="filter-category">DEPARTEMEN:</label>
+      <select id="filter-category">
+        <option value="all">Semua Bidang</option>
+        <option value="frontend">Frontend Dev</option>
+        <option value="backend">Backend Dev</option>
+        <option value="animator">FALS4D</option>
+      </select>
+    </section>
+
+    <!-- Daftar Content Tools -->
+    <section id="tools-container" class="grid-container">
+      <!-- Item tools akan dimuat secara dinamis via JS -->
+    </section>
+  </main>
+
+  <!-- Modal Pop-up Login -->
+  <div id="login-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Masuk ke Akun</h2>
+      
+      <!-- Form Email/Password -->
+      <form id="email-login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Login dengan Email</button>
+      </form>
+
+      <div class="divider"><span>atau</span></div>
+
+      <!-- Tombol Google Sign-In -->
+      <button id="btn-google-login" class="btn btn-google">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="18">
+        Masuk dengan Google
+      </button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK (Modular v10+) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

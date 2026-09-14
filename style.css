@@ -1,0 +1,294 @@
+:root {
+  --primary: #2563eb;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --bg: #030711;
+  --card: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: #01060c;
+}
+
+header {
+  background: #1a1b1a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-success {
+  background: var(--success);
+  color: rgb(8, 45, 22);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-secondary {
+  background: #64748b;
+  color: white;
+}
+
+.badge {
+  background: #3b82f6;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tool-content-box {
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.tool-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Styling Modal Login */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  border-bottom: 1px solid #cbd5e1;
+  line-height: 0.1em;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #64748b;
+}
+
+.btn-google {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styling Modal Login */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  border-bottom: 1px solid #cbd5e1;
+  line-height: 0.1em;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #64748b;
+}
+
+.btn-google {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Mengubah container menjadi layout tag berjejer */
+.grid-container {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Container untuk per tag */
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 2px 6px 2px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.tag-item:hover {
+  border-color: #2563eb;
+  background-color: #f8fafc;
+}
+
+/* Tombol Tag Utama */
+.btn-tag {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag-hash {
+  color: #2563eb;
+  font-weight: 800;
+}
+
+/* Efek saat diklik / tersalin */
+.btn-tag.copied {
+  color: #16a34a;
+}
+
+/* Tombol kecil aksi edit & hapus di sebelah tag */
+.tag-actions {
+  display: flex;
+  gap: 2px;
+  margin-left: 4px;
+  border-left: 1px solid #e2e8f0;
+  padding-left: 4px;
+}
+
+.btn-tag-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  padding: 2px 4px;
+  border-radius: 50%;
+}
+
+.btn-tag-action:hover {
+  opacity: 1;
+  background: #f1f5f9;
+}
