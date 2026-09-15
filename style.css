@@ -15,7 +15,10 @@ body {
 }
 
 header {
-  background: #1a1b1a;
+    background-image: url('  https://img.magnific.com/free-vector/half-tone-blue-abstract-background-with-text-space_1017-41428.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
