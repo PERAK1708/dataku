@@ -295,3 +295,21 @@ input, select, textarea {
   opacity: 1;
   background: #f1f5f9;
 }
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-credits span {
+  color: #007bff;
+  font-weight: bold;
+}
